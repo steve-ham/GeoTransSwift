@@ -13,6 +13,8 @@
 		AAE065E7279869D8002F5A2A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AAE065E5279869D8002F5A2A /* Main.storyboard */; };
 		AAE065E9279869DA002F5A2A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AAE065E8279869DA002F5A2A /* Assets.xcassets */; };
 		AAE065EC279869DA002F5A2A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AAE065EA279869DA002F5A2A /* LaunchScreen.storyboard */; };
+		AAE065F4279869EF002F5A2A /* GeoPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE065F3279869EF002F5A2A /* GeoPoint.swift */; };
+		AAE065F6279869F8002F5A2A /* GeoTrans.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE065F5279869F8002F5A2A /* GeoTrans.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		AAE065E8279869DA002F5A2A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AAE065EB279869DA002F5A2A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AAE065ED279869DA002F5A2A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AAE065F3279869EF002F5A2A /* GeoPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeoPoint.swift; sourceTree = "<group>"; };
+		AAE065F5279869F8002F5A2A /* GeoTrans.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeoTrans.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +63,8 @@
 				AAE065DF279869D8002F5A2A /* AppDelegate.swift */,
 				AAE065E1279869D8002F5A2A /* SceneDelegate.swift */,
 				AAE065E3279869D8002F5A2A /* ViewController.swift */,
+				AAE065F3279869EF002F5A2A /* GeoPoint.swift */,
+				AAE065F5279869F8002F5A2A /* GeoTrans.swift */,
 				AAE065E5279869D8002F5A2A /* Main.storyboard */,
 				AAE065E8279869DA002F5A2A /* Assets.xcassets */,
 				AAE065EA279869DA002F5A2A /* LaunchScreen.storyboard */,
@@ -139,7 +145,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				AAE065E4279869D8002F5A2A /* ViewController.swift in Sources */,
+				AAE065F6279869F8002F5A2A /* GeoTrans.swift in Sources */,
 				AAE065E0279869D8002F5A2A /* AppDelegate.swift in Sources */,
+				AAE065F4279869EF002F5A2A /* GeoPoint.swift in Sources */,
 				AAE065E2279869D8002F5A2A /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
