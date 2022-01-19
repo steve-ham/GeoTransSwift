@@ -37,7 +37,7 @@ class GeoTrans {
     
     private var datum_params = Array(repeating: 0.0, count: 3)
     
-    init() {
+    private init() {
         m_arScaleFactor[CoordinateSystem.wgs84.rawValue] = 1
         m_arLonCenter[CoordinateSystem.wgs84.rawValue] = 0.0
         m_arLatCenter[CoordinateSystem.wgs84.rawValue] = 0.0
