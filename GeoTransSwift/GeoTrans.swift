@@ -181,22 +181,22 @@ class GeoTrans {
         return asin(value)
     }
     
-    func convert(srctype: CoordinateSystem, dsttype: CoordinateSystem, in_pt: GeoPoint) -> GeoPoint {
+    func convert(from: CoordinateSystem, to: CoordinateSystem, geoPoint: GeoPoint) -> GeoPoint {
         let tmpPt = GeoPoint()
         let out_pt = GeoPoint()
         
-        if (srctype == .wgs84) {
-            tmpPt.longitude = D2R(in_pt.longitude)
-            tmpPt.latitude = D2R(in_pt.latitude)
+        if (from == .wgs84) {
+            tmpPt.longitude = D2R(geoPoint.longitude)
+            tmpPt.latitude = D2R(geoPoint.latitude)
         } else {
-            tm2geo(srctype, in_pt, tmpPt)
+            tm2geo(from, geoPoint, tmpPt)
         }
         
-        if (dsttype == .wgs84) {
+        if (to == .wgs84) {
             out_pt.longitude = R2D(tmpPt.longitude)
             out_pt.latitude = R2D(tmpPt.latitude)
         } else {
-            geo2tm(dsttype, tmpPt, out_pt)
+            geo2tm(to, tmpPt, out_pt)
             //out_pt.longitude = round(out_pt.longitude)
             //out_pt.latitude = round(out_pt.latitude)
         }

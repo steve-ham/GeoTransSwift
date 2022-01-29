@@ -11,23 +11,23 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        let in_pt = GeoPoint(longitude: 127.024612, latitude: 37.532600)
+        let wgs84GeoPoint = GeoPoint(longitude: 127.024612, latitude: 37.532600)
         
-        let tm_pt = GeoTrans.shared.convert(srctype: .wgs84, dsttype: .tm, in_pt: in_pt)
-        print("tm_pt \(tm_pt.longitude) \(tm_pt.latitude)")
+        let tmGeoPoint = GeoTrans.shared.convert(from: .wgs84, to: .tm, geoPoint: wgs84GeoPoint)
+        print("tmGeoPoint \(tmGeoPoint.longitude) \(tmGeoPoint.latitude)")
         
-        let katec_pt = GeoTrans.shared.convert(srctype: .tm, dsttype: .katec, in_pt: tm_pt)
-        print("katec_pt \(katec_pt.longitude) \(katec_pt.latitude)")
+        let katecGeoPoint = GeoTrans.shared.convert(from: .tm, to: .katec, geoPoint: tmGeoPoint)
+        print("katecGeoPoint \(katecGeoPoint.longitude) \(katecGeoPoint.latitude)")
         
-        let out_pt = GeoTrans.shared.convert(srctype: .katec, dsttype: .wgs84, in_pt: katec_pt)
-        print("out_pt \(out_pt.longitude) \(out_pt.latitude)")
+        let wgs84GeoPoint2 = GeoTrans.shared.convert(from: .katec, to: .wgs84, geoPoint: katecGeoPoint)
+        print("wgs84GeoPoint2 \(wgs84GeoPoint2.longitude) \(wgs84GeoPoint2.latitude)")
         
-        let in2_pt = GeoPoint(longitude: 128.0, latitude: 38.0)
-        let distance = GeoTrans.shared.getDistancebyGeo(in_pt, in2_pt)
+        let wgs84GeoPoint3 = GeoPoint(longitude: 128.0, latitude: 38.0)
+        let distance = GeoTrans.shared.getDistancebyGeo(wgs84GeoPoint, wgs84GeoPoint3)
         print("distance \(distance)")
         
-        let grsPoint = GeoTrans.shared.convert(srctype: .wgs84, dsttype: .grs80, in_pt: in_pt)
-        print("grsPoint \(grsPoint.longitude) \(grsPoint.latitude)")
+        let grs80GeoPoint = GeoTrans.shared.convert(from: .wgs84, to: .grs80, geoPoint: wgs84GeoPoint)
+        print("grs80GeoPoint \(grs80GeoPoint.longitude) \(grs80GeoPoint.latitude)")
     }
 
 
